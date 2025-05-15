@@ -1,0 +1,103 @@
+Default.aspx
+
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<title></title>
+</head>
+<body>
+<form id="form1" runat="server">
+<div>
+<h1>Practical 2.3</h1>
+Enter Your Name : <asp:TextBox ID="txtName" runat="server" Width="182px"></asp:TextBox>
+<br />
+<br />
+Enter Your Message:
+<asp:TextBox ID="txtMsg" runat="server" Height="52px" Width="175px"></asp:TextBox>
+<br />
+<br />
+<br />
+Select the Font Color :
+<asp:RadioButtonList ID="RadioButtonList1" runat="server" AutoPostBack="true" onselectedindexchanged="RadioButtonList1_SelectedIndexChanged">
+<asp:ListItem>Red</asp:ListItem>
+<asp:ListItem>Green</asp:ListItem>
+<asp:ListItem>Blue</asp:ListItem>
+<asp:ListItem Value="Y">Yellow</asp:ListItem>
+</asp:RadioButtonList>
+Select the Formatting :<br />
+<asp:CheckBoxList ID="CheckBoxList1" runat="server" AutoPostBack="true" onselectedindexchanged="CheckBoxList1_SelectedIndexChanged">
+<asp:ListItem Value="B">Bold</asp:ListItem>
+<asp:ListItem Value="I">Italics</asp:ListItem>
+<asp:ListItem Value="U">Underline</asp:ListItem>
+</asp:CheckBoxList>
+<br />
+<asp:Label ID="lblmsg" runat="server" Font-Bold="True" Font-Names="Bahnschrift" ForeColor="#660066"></asp:Label>
+<br />
+<asp:Button ID="btnSubmit" Text="Submit" runat="server" onclick="btnSubmit_Click" />
+</div>
+ 
+
+</form>
+</body>
+</html>
+
+
+Default.aspx.cs
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+public partial class _Default : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+    }
+    protected void btnSubmit_Click(object sender, EventArgs e)
+    {
+        lblmsg.Text = "Your Name is :" + txtName.Text + " and You Message is : " + txtMsg.Text;
+    }
+    protected void RadioButtonList1_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        if (RadioButtonList1.SelectedValue == "Red")
+        {
+            lblmsg.ForeColor = System.Drawing.Color.Red;
+        }
+        else if (RadioButtonList1.SelectedValue == "Green")
+        {
+            lblmsg.ForeColor = System.Drawing.Color.Green;
+        }
+        if (RadioButtonList1.SelectedValue == "Blue")
+        {
+            lblmsg.ForeColor = System.Drawing.Color.Blue;
+        }
+        if (RadioButtonList1.SelectedValue == "Y")
+        {
+            lblmsg.ForeColor = System.Drawing.Color.Yellow;
+        }
+    }
+    protected void CheckBoxList1_SelectedIndexChanged(object sender, EventArgs e)
+
+
+    {
+        if (CheckBoxList1.SelectedValue == "B")
+        {
+            lblmsg.Font.Bold = true;
+        }
+        else if (CheckBoxList1.SelectedValue == "I")
+        {
+            lblmsg.Font.Italic = true;
+        }
+        else if (CheckBoxList1.SelectedValue == "U")
+        {
+            lblmsg.Font.Underline = true;
+        }
+    }
+}
