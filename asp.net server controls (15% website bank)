@@ -1,0 +1,50 @@
+Homepage.aspx
+
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Homepage.aspx.cs" Inherits="Homepage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<title></title>
+</head>
+<body>
+<form id="form1" runat="server">
+<div>
+<asp:Image runat="server" ID="logo" ImageUrl="~/Amity.png" />
+
+</div>
+<div>
+<asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" PathSeparator="|">
+<Items>
+<asp:MenuItem
+NavigateUrl="~/GridviewDemo.aspx" Text="Gridview Demo" Value="Gridview Demo">
+</asp:MenuItem>
+<asp:MenuItem NavigateUrl="~/Login.aspx" Text="LINQ Demo" Value="LINQ Demo">
+</asp:MenuItem>
+ 
+
+<asp:MenuItem NavigateUrl="~/Login.aspx" Text="Login" Value="Login">
+</asp:MenuItem>
+</Items>
+</asp:Menu>
+    <asp:Label ID="lblTitle" runat="server" Font-Size="XX-Large" Font-Bold="True" ForeColor="Black"></asp:Label>
+
+
+</div>
+</form>
+</body>
+</html>
+
+Homepage.aspx.cs
+
+using System;
+using System.Web.UI;
+
+public partial class Homepage : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        // Optional: Any logic you want to execute when the page loads
+    }
+}
