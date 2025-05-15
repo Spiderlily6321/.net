@@ -1,0 +1,69 @@
+
+
+#### **Step 1: Open Visual Studio / Code Editor**
+
+* Open **Visual Studio** or any C# code editor 
+---
+
+#### **Step 2: Create a New Console Project**
+
+* Go to **File > New > Project** > Choose **Console App (.NET Framework or .NET Core)**
+* Name the project ConsoleApp1
+
+---
+
+#### **Step 3: Add the Code**
+
+`Program.cs`
+
+
+using System;
+
+namespace ConsoleApp1
+{
+    class MyClass
+    {
+        public void Election()
+        {
+            Console.WriteLine("Election method called.");
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            MyClass x = new MyClass(); 
+            x.Election();
+
+            int a, b, c, d, e;
+
+            Console.WriteLine("Enter First Number :"); 
+            a = Convert.ToInt32(Console.ReadLine()); 
+
+            Console.WriteLine("Enter Second Number :"); 
+            b = Convert.ToInt32(Console.ReadLine()); 
+
+            Console.WriteLine("Enter Third Number :"); 
+            c = Convert.ToInt32(Console.ReadLine()); 
+
+            Console.WriteLine("Enter Fourth Number :");
+            d = Convert.ToInt32(Console.ReadLine());
+
+            e = a + b + c + d;
+
+            Console.WriteLine("Practical No. 1");
+            Console.WriteLine("Addition of " + a + ", " + b + ", " + c + ", " + d + " is " + e); 
+            Console.ReadKey();
+        }
+    }
+}
+
+#### **Step 4: Build the Project**
+
+
+#### **Step 5: Run the Program**
+
+
+
+
