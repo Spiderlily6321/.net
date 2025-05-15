@@ -1,18 +1,16 @@
 
 
-#### **Step 1: Open Visual Studio / Code Editor**
+Step 1: Open Visual Studio / Code Editor
+→ Open Visual Studio or any C# editor like Visual Studio Code
 
-* Open **Visual Studio** or any C# code editor 
----
+Step 2: Create a New Console Project
+→ Click File → New → Project
+→ Select Console App (.NET Framework) or Console App (.NET Core)
+→ Give the name ConsoleApp1
+→ Click Create
 
-#### **Step 2: Create a New Console Project**
-
-* Go to **File > New > Project** > Choose **Console App (.NET Framework or .NET Core)**
-* Name the project ConsoleApp1
-
----
-
-#### **Step 3: Add the Code**
+Step 3: Add the Code
+→ Open the file named Program.cs
 
 `Program.cs`
 
