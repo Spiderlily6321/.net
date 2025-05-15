@@ -1,0 +1,89 @@
+Step 1: Open Visual Studio / Code Editor
+→ Open Visual Studio or any C# editor like Visual Studio Code
+
+Step 2: Create a New Console Project
+→ Click File → New → Project
+→ Select Console App (.NET Framework) or Console App (.NET Core)
+→ Give the name ConsoleApp3
+→ Click Create
+
+Step 3: Add the Code
+→ Open the file named Program.cs
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+namespace ConsoleApp3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Student s = new Student(); s.Grades();
+
+            Console.ReadKey();
+        }
+    }
+}
+
+
+Step 4: Click Project → Add New Item → Give name MyClass.cs
+
+using System;
+
+namespace ConsoleApp3
+{
+    public class Student
+    {
+        public void Grades()
+        {
+            int cpp, java, os, devop, linux;
+            double total, per;
+
+            Console.WriteLine("Enter the Marks in C#: ");
+            cpp = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter the Marks in Java: ");
+            java = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter the Marks in Operating System: ");
+            os = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter the Marks in DevOps: ");
+            devop = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter the Marks in Linux: ");
+            linux = Convert.ToInt32(Console.ReadLine());
+
+            total = cpp + java + os + devop + linux;
+            per = total * 100 / 500;
+
+            Console.WriteLine("The Percentage is: " + per + "%");
+
+            if (per >= 75)
+            {
+                Console.WriteLine("Your Grade is: DISTINCTION");
+            }
+            else if (per >= 60 && per < 75)
+            {
+                Console.WriteLine("Your Grade is: First Class");
+            }
+            else if (per >= 50 && per < 60)
+            {
+                Console.WriteLine("Your Grade is: Second Class");
+            }
+            else if (per >= 40 && per < 50)
+            {
+                Console.WriteLine("Your Grade is: Pass Class");
+            }
+            else
+            {
+                Console.WriteLine("You are Failed!!!");
+            }
+        }
+    }
+}
+
+Step 5: Run the MyClass.cs
