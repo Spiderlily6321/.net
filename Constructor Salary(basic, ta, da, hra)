@@ -1,0 +1,64 @@
+Step 1: Open Visual Studio / Code Editor
+→ Open Visual Studio or any C# editor like Visual Studio Code
+
+Step 2: Create a New Console Project
+→ Click File → New → Project
+→ Select Console App (.NET Framework) or Console App (.NET Core)
+→ Give the name ConsoleApp7
+→ Click Create
+
+Step 3: Add the Code
+→ Open the file named Program.cs
+
+using System;
+using System.Collections.Generic; using System.Linq;
+using System.Text;
+ 
+namespace ConsoleApp7
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            //*CONSTRUCTOR DEMO*
+            ConstDemo c = new ConstDemo();
+            c.Salary(); 
+            Console.ReadKey();
+        }
+    }
+}
+
+
+
+Step 4: Click Project → Add New Item → Give name ConstDemo.cs
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApp7
+{
+    public class ConstDemo
+    {
+        double basic, ta, da, hra; double total;
+
+        public ConstDemo()
+        {
+            basic = 4000.00;
+            ta = 5000.00;
+            da = 2500.50;
+            hra = 3000;
+        }
+        public void Salary()
+        {
+            total = basic + ta + da + hra;
+            Console.WriteLine("Your Final Salary is " + total);
+        }
+    }
+}
+
+
+
+Step 5: Run the ConstDemo.cs
